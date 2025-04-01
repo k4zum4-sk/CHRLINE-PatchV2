@@ -31,7 +31,7 @@ def login_qr(): #.imagesディレクトリにQRコードが保存されるので
 
 def login_phone(): #電話番号と国を指定してログイン 例:09012345678, JP
     try:
-        return CHRLINE(phone="", region="")
+        return CHRLINE(phone="", region="") #このログイン方法は推奨しません。
     except Exception as err:
         print(f"ログイン失敗: {err}")
         return None
