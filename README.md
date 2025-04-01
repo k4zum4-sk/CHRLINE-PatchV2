@@ -55,7 +55,7 @@
   - httpx[http2]
   - gevent
 
-- - - - - - - - - - - - - - - - - - # k4zum4 # - - - - - - - - - - - - - - - - - - -
+ - - - - - - # k4zum4 # - - - - - - 
 # CHRLINE Patch for JP
 
 First of all, I am not the direct developer of this library.
@@ -116,4 +116,4 @@ First, please try from `CHRLINE-PatchV2/test/login_getToken_test.py`.
   - httpx[http2]
   - gevent
 
-- - - - - - - - - - - - - - - - - - # k4zum4 # - - - - - - - - - - - - - - - - - - -
+ - - - - - - # k4zum4 # - - - - - - 
