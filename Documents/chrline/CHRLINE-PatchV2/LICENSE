@@ -1,0 +1,43 @@
+BSD 3条項ライセンス
+
+著作権 (c) 2021, DeachSword
+全ての権利を保有します。
+
+以下の条件を満たす場合、ソースコードおよびバイナリ形式での再配布および使用が許可されます（改変の有無にかかわらず）：
+
+1. ソースコードの再配布には、上記の著作権表示、条件リスト、および以下の免責条項を保持すること。
+2. バイナリ形式での再配布には、上記の著作権表示、条件リスト、および以下の免責条項を、配布に付随する文書やその他の資料に記載すること。
+3. 著作権者の名前およびその貢献者の名前は、このソフトウェアから派生した製品の推奨や販売促進に使用してはならず、特定の事前書面による許可なしに使用することはできません。
+
+このソフトウェアは著作権者および貢献者によって「現状のまま」提供されており、明示または黙示のいかなる保証もありません。これには商品性および特定の目的への適合性に関する黙示の保証も含まれますが、それに限りません。
+著作権者または貢献者は、このソフトウェアの使用に起因する、直接的、間接的、偶発的、特別、例示的、または結果的な損害（代替品の調達、使用の喪失、データや利益の喪失、または業務の中断を含むがそれに限らない）について、契約、不法行為、厳格責任、または過失を含む理論に基づいて一切の責任を負いません。
+
+BSD 3-Clause License
+
+Copyright (c) 2021, DeachSword
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

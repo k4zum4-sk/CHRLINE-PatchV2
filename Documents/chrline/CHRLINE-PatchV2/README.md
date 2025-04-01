@@ -1,0 +1,119 @@
+# CHRLINE 修正パッチ for JP
+
+まず、このライブラリの直接の開発者は私ではありません。
+**DeachSword氏が全ての権利を保有**します
+
+このプロジェクトは、非公式LINE APIであるCHRLINEの**循環インポート問題とインポートエラ**ーを修正したバージョンです。
+
+**具体的な修正内容**
+ - `thrift.py`がthriftライブラリと衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
+ - `client.py`のインポート文をchrline_thriftに合わせて修正
+
+- 日本語のコメント付きサンプルコードは `CHRLINE-PatchV2/test/` にあります。  
+
+- 利用可能な API 一覧は `CHRLINE-PatchV2/CHRLINE/service/object.py` を参照してください。
+
+以下のコマンドでセットアップが実行できます：
+- python3 setup.py install
++ python3 -m pip install .
+
+まずは`CHRLINE-PatchV2/test/login_getToken_test.py`から試してみてください。
+
+**環境変数の設定 FOR MAC & WSL**
+1. echo $SHELL を実行し、シェルの種類を確認:
+ - zsh → .zshrc に設定する: -> echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.zshrc　を実行
+
+ - bash → .bashrc に設定する: -> echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.bashrc　を実行
+
+ 2. 設定を反映:
+ - zsh 
+  - source ~/.zshrc  を実行
+ 
+ - bash
+  - source ~/.bashrc　を実行
+
+3. 確認:
+ - echo $CHRLINE_PATCH_PATH を実行
+
+
+**環境変数の設定 FOR WINDOWS**
+1. コマンドプロンプト（cmd）の場合:
+ - set CHRLINE_PATCH_PATH "CHRLINE-PatchV2の正しいディレクトリパスを指定"  を実行
+
+2. PowerShell の場合:
+ - [System.Environment]::SetEnvironmentVariable("CHRLINE_PATCH_PATH", "CHRLINE-PatchV2の正しいディレクトリパスを指定", [System.EnvironmentVariableTarget]::User)
+  現在のセッションのみで有効 にする場合：
+- $env:CHRLINE_PATCH_PATH = "CHRLINE-PatchV2の正しいディレクトリパスを指定"
+
+
+#### 必要条件 ####
+
+- Python 3.7
+  - pycrypto
+  - pycryptodome
+  - xxhash
+  - httpx[http2]
+  - gevent
+
+- - - - - - - - - - - - - - - - - - # k4zum4 # - - - - - - - - - - - - - - - - - - -
+# CHRLINE Patch for JP
+
+First of all, I am not the direct developer of this library.
+DeachSword holds all rights to it.
+
+This project is a modified version of the unofficial LINE API, CHRLINE, that fixes circular import issues and import errors.
+
+Specific changes:
+ - The file thrift.py was conflicting with the thrift library, causing circular imports. It has been renamed to chrline_thrift.py to resolve the issue.
+ - The import statements in client.py were modified to match the changes in chrline_thrift.
+
+The basic usage in Japanese is described in the CHRLINE-PatchV2/test file.
+
+The available modules are listed in CHRLINE-PatchV2/CHRLINE/service/object.py.
+
+You can run the setup with the following command:
+python3 setup.py install
+
+First, please try from `CHRLINE-PatchV2/test/login_getToken_test.py`.
+- Make sure to specify the correct directory path for CHRLINE-PatchV2.
+
+**Setting Environment Variables FOR MAC & WSL**
+
+1. Check your shell type by running:  
+   ```sh
+   echo $SHELL
+- If using zsh, add the variable to .zshrc:
+  - echo 'export CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"' >> ~/.zshrc
+
+- If using bash, add the variable to .bashrc:
+  - echo 'export CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"' >> ~/.bashrc
+
+2. Apply the settings:
+- For zsh:
+  - source ~/.zshrc
+- For bash:
+  - source ~/.bashrc
+
+3. Verify the variable is set:
+- echo $CHRLINE_PATCH_PATH
+
+**Setting Environment Variables FOR WINDOWS**
+1. For Command Prompt (cmd):
+ - set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
+2. For PowerShell:
+ - To set the variable permanently:
+  - [System.Environment]::SetEnvironmentVariable("CHRLINE_PATCH_PATH", "Specify the correct directory path for CHRLINE-PatchV2", [System.EnvironmentVariableTarget]::User)
+ - To set it only for the current session:
+   - $env:CHRLINE_PATCH_PATH = "Specify the correct directory path for CHRLINE-PatchV2"
+
+
+#### Requirement ####
+
+- Python 3.7
+  - pycrypto
+  - pycryptodome
+  - xxhash
+  - httpx[http2]
+  - gevent
+
+- - - - - - - - - - - - - - - - - - # k4zum4 # - - - - - - - - - - - - - - - - - - -
