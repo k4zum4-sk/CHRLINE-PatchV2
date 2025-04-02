@@ -17,7 +17,7 @@ CHRLINE を利用する際、Crypto モジュールのエラーや、循環イ�
 
 # 具体的な修正内容
 
-1. Windows環境での Crypto モジュールのエラー修正
+**1. Windows環境での Crypto モジュールのエラー修正**
   
   - `from Crypto.Cipher import AES` などのインポートが Windows でエラーになる問題を修正
   - `CHRLINE-PatchV2/CHRLINE/e2ee.py,models.py` のインポート文 `Crypto` を `Cryptodome` に変更し、どの環境でも動作するよう統一
@@ -28,7 +28,7 @@ python -m pip uninstall pycrypto
 python -m pip install pycryptodome
 ```
 
-2. 循環インポートとそれに関するエラーの修正
+**2. 循環インポートとそれに関するエラーの修正**
 
   - `thrift.py` というファイル名が公式の `thriftライブラリ`と衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
   - `client.py`のインポート文を`chrline_thrift`に合わせて修正
