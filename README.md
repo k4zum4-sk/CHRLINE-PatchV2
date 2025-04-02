@@ -14,8 +14,12 @@
 - 利用可能な API 一覧は `CHRLINE-PatchV2/CHRLINE/service/object.py` を参照してください。
 
 以下のコマンドでセットアップが実行できます：
-- python3 setup.py install
-+ python3 -m pip install .
+```sh
+python3 setup.py install
+```
+```sh
+python3 -m pip install .
+```
 
 まずは`CHRLINE-PatchV2/test/login_getToken_test.py`から試してみてください。
 
@@ -26,30 +30,30 @@
   ```
  - zsh → .zshrc に設定する: ->
    ```sh
-   echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.zshrc　を実行
+   echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.zshrc
    ```
  - bash → .bashrc に設定する: ->
    ```sh
-   echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.bashrc　を実行
+   echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.bashrc
    ```
  2. 設定を反映:
  - zsh
    ```sh
-   source ~/.zshrc  を実行
+   source ~/.zshrc
    ```
  - bash
    ```sh
-   source ~/.bashrc　を実行
+   source ~/.bashrc
    ```
 3. 確認:
    ```sh
-   echo $CHRLINE_PATCH_PATH を実行
+   echo $CHRLINE_PATCH_PATH
    ```
 
 **環境変数の設定 FOR WINDOWS**
 1. コマンドプロンプト（cmd）の場合:
   ```sh
-  set CHRLINE_PATCH_PATH "CHRLINE-PatchV2の正しいディレクトリパスを指定"  を実行
+  set CHRLINE_PATCH_PATH "CHRLINE-PatchV2の正しいディレクトリパスを指定"
   ```
 2. PowerShell の場合:
   ```sh
