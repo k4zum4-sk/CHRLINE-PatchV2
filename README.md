@@ -11,11 +11,15 @@ CHRLINEを使うことで**個人アカウントのBOT化**などを実現でき
 元のCHRLINEリポジトリ -> https://github.com/DeachSword/CHRLINE/tree/master
 
 **具体的な修正内容**
-**1. Windows環境での Crypto モジュールのエラー修正**
+
+1. Windows環境での Crypto モジュールのエラー修正
+  
   - `from Crypto.Cipher import AES` などのインポートが Windows でエラーになる問題を修正
   - `CHRLINE-PatchV2/CHRLINE/e2ee.py,models.py` のインポート文 `Crypto` を `Cryptodome` に変更し、どの環境でも動作するよう統一
-**2. 循環インポートとそれに関するエラーの修正**
- 　- `thrift.py` というファイル名が公式の `thriftライブラリ`と衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
+
+2. 循環インポートとそれに関するエラーの修正
+
+   - `thrift.py` というファイル名が公式の `thriftライブラリ`と衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
  　- `client.py`のインポート文を`chrline_thrift`に合わせて修正
 
 - 日本語のコメント付きサンプルコードは `CHRLINE-PatchV2/test/` にあります。  
@@ -86,7 +90,7 @@ python3 -m pip install .
 #### 必要条件 ####
 
 - Python 3.7
-  - pycrypto
+  - ~~pycrypto~~
   - pycryptodome
   - xxhash
   - httpx[http2]
@@ -169,7 +173,7 @@ set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
 #### Requirement ####
 
 - Python 3.7
-  - pycrypto
+  - ~~pycrypto~~
   - pycryptodome
   - xxhash
   - httpx[http2]
