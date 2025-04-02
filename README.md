@@ -87,6 +87,7 @@ python3 -m pip install .
   - xxhash
   - httpx[http2]
   - gevent
+その他必要なモジュールは各々でインストールをお願いします
 
  - - - - - - # k4zum4 # - - - - - - 
 # CHRLINE Patch for JP
