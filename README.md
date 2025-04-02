@@ -1,5 +1,5 @@
-![logo](/examples/assets/logo.png)
 # CHRLINE 修正パッチ for JP
+![logo](/examples/assets/logo.png)
 
 まず、このライブラリの直接の開発者は私ではありません。
 **DeachSword氏が全ての権利を保有**します
