@@ -12,8 +12,10 @@ import secrets
 from typing import Any, Optional, Union
 
 import axolotl_curve25519 as Curve25519
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad, unpad
+from Cryptodome.Cipher import AES
+#from Crypto.Cipher import AES #Cryptoを使いたい場合はコメントを外す
+from Cryptodome.Util.Padding import pad, unpad
+#from Crypto.Util.Padding import pad, unpad #Cryptoを使いたい場合はコメントを外す
 from cryptography.hazmat.primitives import hashes, hmac
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
