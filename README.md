@@ -23,23 +23,24 @@
 1. echo $SHELL を実行し、シェルの種類を確認:
   ```sh
   echo $SHELL
+  ```
  - zsh → .zshrc に設定する: ->
    ```sh
    echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.zshrc　を実行
-
+   ```
  - bash → .bashrc に設定する: ->
    ```sh
    echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.bashrc　を実行
-
+   ```
  2. 設定を反映:
  - zsh
    ```sh
    source ~/.zshrc  を実行
- 
+   ```
  - bash
    ```sh
    source ~/.bashrc　を実行
-
+   ```
 3. 確認:
    ```sh
    echo $CHRLINE_PATCH_PATH を実行
@@ -49,10 +50,11 @@
 1. コマンドプロンプト（cmd）の場合:
    ```sh
   set CHRLINE_PATCH_PATH "CHRLINE-PatchV2の正しいディレクトリパスを指定"  を実行
-
-3. PowerShell の場合:
+  ```
+2. PowerShell の場合:
   ```sh
   [System.Environment]::SetEnvironmentVariable("CHRLINE_PATCH_PATH", "CHRLINE-PatchV2の正しいディレクトリパスを指定", [System.EnvironmentVariableTarget]::User)
+  ```
   現在のセッションのみで有効 にする場合：
   ```sh
   $env:CHRLINE_PATCH_PATH = "CHRLINE-PatchV2の正しいディレクトリパスを指定"
@@ -94,21 +96,24 @@ First, please try from `CHRLINE-PatchV2/test/login_getToken_test.py`.
 1. Check your shell type by running:  
    ```sh
    echo $SHELL
+   ```
 - If using zsh, add the variable to .zshrc:
   ```sh
   echo 'export CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"' >> ~/.zshrc
-
+  ```
 - If using bash, add the variable to .bashrc:
   ```sh
   echo 'export CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"' >> ~/.bashrc
-
+  ```
 2. Apply the settings:
 - For zsh:
 ```sh
  source ~/.zshrc
+```
 - For bash:
 ```sh
 source ~/.bashrc
+```
 
 3. Verify the variable is set:
 ```sh
@@ -119,10 +124,12 @@ echo $CHRLINE_PATCH_PATH
 1. For Command Prompt (cmd):
 ```sh
 set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
+```
 2. For PowerShell:
  - To set the variable permanently:
  ```sh
  [System.Environment]::SetEnvironmentVariable("CHRLINE_PATCH_PATH", "Specify the correct directory path for CHRLINE-PatchV2", [System.EnvironmentVariableTarget]::User)
+```
  - To set it only for the current session:
   ```sh
   $env:CHRLINE_PATCH_PATH = "Specify the correct directory path for CHRLINE-PatchV2"
