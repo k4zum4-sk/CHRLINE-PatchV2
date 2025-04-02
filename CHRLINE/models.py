@@ -10,13 +10,17 @@ from typing import Any, Optional, Union
 from urllib.parse import quote
 
 import axolotl_curve25519 as curve
-import Crypto.Cipher.PKCS1_OAEP as rsaenc
+#import Crypto.Cipher.PKCS1_OAEP as rsaenc #Cryptoを使いたい場合はコメントを外す
+import Cryptodome.Cipher.PKCS1_OAEP as rsaenc
 import httpx
 import requests
 import xxhash
-from Crypto.Cipher import AES
-from Crypto.PublicKey import RSA
-from Crypto.Util.Padding import pad, unpad
+#from Crypto.Cipher import AES #Cryptoを使いたい場合はコメントを外す
+from Cryptodome.Cipher import AES
+#from Crypto.PublicKey import RSA #Cryptoを使いたい場合はコメントを外す
+from Cryptodome.PublicKey import RSA
+#from Crypto.Util.Padding import pad, unpad #Cryptoを使いたい場合はコメントを外す
+from Cryptodome.Util.Padding import pad, unpad
 
 from thrift.transport.TTransport import TMemoryBuffer
 
