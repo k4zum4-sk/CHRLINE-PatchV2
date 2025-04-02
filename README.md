@@ -21,30 +21,42 @@
 
 **環境変数の設定 FOR MAC & WSL**
 1. echo $SHELL を実行し、シェルの種類を確認:
- - zsh → .zshrc に設定する: -> echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.zshrc　を実行
+  ```sh
+  echo $SHELL
+ - zsh → .zshrc に設定する: ->
+   ```sh
+   echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.zshrc　を実行
 
- - bash → .bashrc に設定する: -> echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.bashrc　を実行
+ - bash → .bashrc に設定する: ->
+   ```sh
+   echo 'export CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"' >> ~/.bashrc　を実行
 
  2. 設定を反映:
- - zsh 
-  - source ~/.zshrc  を実行
+ - zsh
+   ```sh
+   source ~/.zshrc  を実行
  
  - bash
-  - source ~/.bashrc　を実行
+   ```sh
+   source ~/.bashrc　を実行
 
 3. 確認:
- - echo $CHRLINE_PATCH_PATH を実行
-
+   ```sh
+   echo $CHRLINE_PATCH_PATH を実行
+   ```
 
 **環境変数の設定 FOR WINDOWS**
 1. コマンドプロンプト（cmd）の場合:
- - set CHRLINE_PATCH_PATH "CHRLINE-PatchV2の正しいディレクトリパスを指定"  を実行
+   ```sh
+  set CHRLINE_PATCH_PATH "CHRLINE-PatchV2の正しいディレクトリパスを指定"  を実行
 
-2. PowerShell の場合:
- - [System.Environment]::SetEnvironmentVariable("CHRLINE_PATCH_PATH", "CHRLINE-PatchV2の正しいディレクトリパスを指定", [System.EnvironmentVariableTarget]::User)
+3. PowerShell の場合:
+  ```sh
+  [System.Environment]::SetEnvironmentVariable("CHRLINE_PATCH_PATH", "CHRLINE-PatchV2の正しいディレクトリパスを指定", [System.EnvironmentVariableTarget]::User)
   現在のセッションのみで有効 にする場合：
-- $env:CHRLINE_PATCH_PATH = "CHRLINE-PatchV2の正しいディレクトリパスを指定"
-
+  ```sh
+  $env:CHRLINE_PATCH_PATH = "CHRLINE-PatchV2の正しいディレクトリパスを指定"
+  ```
 
 #### 必要条件 ####
 
@@ -101,6 +113,7 @@ source ~/.bashrc
 3. Verify the variable is set:
 ```sh
 echo $CHRLINE_PATCH_PATH
+```
 
 **Setting Environment Variables FOR WINDOWS**
 1. For Command Prompt (cmd):
@@ -113,7 +126,7 @@ set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
  - To set it only for the current session:
   ```sh
   $env:CHRLINE_PATCH_PATH = "Specify the correct directory path for CHRLINE-PatchV2"
-
+  ```
 
 #### Requirement ####
 
