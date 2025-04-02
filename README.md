@@ -11,7 +11,7 @@
 
 - 日本語のコメント付きサンプルコードは `CHRLINE-PatchV2/test/` にあります。  
 
-- 利用可能な API 一覧は `CHRLINE-PatchV2/CHRLINE/service/object.py` を参照してください。
+- 利用可能な API 一覧は `CHRLINE-PatchV2/CHRLINE/object.py` を参照してください。
 
 以下のコマンドでセットアップが実行できます：
 ```sh
