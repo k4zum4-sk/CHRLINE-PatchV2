@@ -17,6 +17,7 @@
 ```sh
 python3 setup.py install
 ```
+上記でダメな場合
 ```sh
 python3 -m pip install .
 ```
