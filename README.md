@@ -1,6 +1,7 @@
 # CHRLINE 修正パッチ (日本語版)
 ![logo](/examples/assets/logo.png)
 
+# CHRLINEとは？
 まず、このライブラリの直接の開発者は私ではありません。
 **DeachSword氏が全ての権利を保有**します
 
