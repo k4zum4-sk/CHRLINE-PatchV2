@@ -19,8 +19,8 @@ CHRLINEを使うことで**個人アカウントのBOT化**などを実現でき
 
 2. 循環インポートとそれに関するエラーの修正
 
-   - `thrift.py` というファイル名が公式の `thriftライブラリ`と衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
- 　- `client.py`のインポート文を`chrline_thrift`に合わせて修正
+  - `thrift.py` というファイル名が公式の `thriftライブラリ`と衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
+  - `client.py`のインポート文を`chrline_thrift`に合わせて修正
 
 - 日本語のコメント付きサンプルコードは `CHRLINE-PatchV2/test/` にあります。  
 
@@ -107,8 +107,16 @@ DeachSword holds all rights to it.
 This project is a modified version of the unofficial LINE API, CHRLINE, that fixes circular import issues and import errors.
 
 Specific changes:
- - The file thrift.py was conflicting with the thrift library, causing circular imports. It has been renamed to chrline_thrift.py to resolve the issue.
- - The import statements in client.py were modified to match the changes in chrline_thrift.
+
+1. **Fixed Crypto module error on Windows**
+
+  -Resolved an issue where from Crypto.Cipher import AES and similar imports caused errors on Windows.
+  -Updated import statements in CHRLINE-PatchV2/CHRLINE/e2ee.py and models.py, changing Crypto to Cryptodome to ensure compatibility across all environments.
+
+2. **Fixed circular imports and related errors**
+
+  - The file thrift.py was conflicting with the thrift library, causing circular imports. It has been renamed to chrline_thrift.py to resolve the issue.
+  - The import statements in client.py were modified to match the changes in chrline_thrift.
 
 The basic usage in Japanese is described in the CHRLINE-PatchV2/test file.
 
