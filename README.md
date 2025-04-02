@@ -1,9 +1,12 @@
+![logo](/examples/assets/logo.png)
 # CHRLINE 修正パッチ for JP
 
 まず、このライブラリの直接の開発者は私ではありません。
 **DeachSword氏が全ての権利を保有**します
 
 このプロジェクトは、非公式LINE APIであるCHRLINEの**循環インポート問題とインポートエラ**ーを修正したバージョンです。
+
+元のCHRLINEリポジトリ -> https://github.com/DeachSword/CHRLINE/tree/master
 
 **具体的な修正内容**
  - `thrift.py`がthriftライブラリと衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
