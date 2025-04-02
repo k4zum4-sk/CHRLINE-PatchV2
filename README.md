@@ -1,4 +1,4 @@
-# CHRLINE 修正パッチ for JP
+# CHRLINE 修正パッチ (日本語版)
 ![logo](/examples/assets/logo.png)
 
 まず、このライブラリの直接の開発者は私ではありません。
@@ -10,14 +10,19 @@ CHRLINEを使うことで**個人アカウントのBOT化**などを実現でき
 
 元のCHRLINEリポジトリ -> https://github.com/DeachSword/CHRLINE/tree/master
 
-**具体的な修正内容**
+# 背景
+
+CHRLINE を利用する際、Crypto モジュールのエラーや、循環インポートの問題が発生しました。
+そこで、多くのユーザーがスムーズに利用できるよう、これらの問題を修正したパッチを作成しました。
+
+# 具体的な修正内容
 
 1. Windows環境での Crypto モジュールのエラー修正
   
   - `from Crypto.Cipher import AES` などのインポートが Windows でエラーになる問題を修正
   - `CHRLINE-PatchV2/CHRLINE/e2ee.py,models.py` のインポート文 `Crypto` を `Cryptodome` に変更し、どの環境でも動作するよう統一
 
-・もし pycrypto をインストールしている場合は、以下のコマンドで削除し、代わりに pycryptodome をインストールしてください
+  - もし `pycrypto` をインストールしている場合は、以下のコマンドで削除し、代わりに pycryptodome をインストールしてください
 ```sh
 python -m pip uninstall pycrypto
 python -m pip install pycryptodome
