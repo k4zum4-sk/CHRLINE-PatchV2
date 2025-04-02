@@ -17,6 +17,12 @@ CHRLINEを使うことで**個人アカウントのBOT化**などを実現でき
   - `from Crypto.Cipher import AES` などのインポートが Windows でエラーになる問題を修正
   - `CHRLINE-PatchV2/CHRLINE/e2ee.py,models.py` のインポート文 `Crypto` を `Cryptodome` に変更し、どの環境でも動作するよう統一
 
+・もし pycrypto をインストールしている場合は、以下のコマンドで削除し、代わりに pycryptodome をインストールしてください
+```sh
+python -m pip uninstall pycrypto
+python -m pip install pycryptodome
+```
+
 2. 循環インポートとそれに関するエラーの修正
 
   - `thrift.py` というファイル名が公式の `thriftライブラリ`と衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
@@ -28,7 +34,7 @@ CHRLINEを使うことで**個人アカウントのBOT化**などを実現でき
 
 ## はじめに
 
-まず、このリポジトリをクローンしてください：
+このリポジトリをクローンし、セットアップ手順を実行してください
 
 ```sh
 git clone https://github.com/k4zum4-sk/CHRLINE-PatchV2.git
