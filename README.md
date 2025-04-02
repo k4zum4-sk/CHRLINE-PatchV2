@@ -83,28 +83,36 @@ First, please try from `CHRLINE-PatchV2/test/login_getToken_test.py`.
    ```sh
    echo $SHELL
 - If using zsh, add the variable to .zshrc:
-  - echo 'export CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"' >> ~/.zshrc
+  ```sh
+  echo 'export CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"' >> ~/.zshrc
 
 - If using bash, add the variable to .bashrc:
-  - echo 'export CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"' >> ~/.bashrc
+  ```sh
+  echo 'export CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"' >> ~/.bashrc
 
 2. Apply the settings:
 - For zsh:
-  - source ~/.zshrc
+```sh
+ source ~/.zshrc
 - For bash:
-  - source ~/.bashrc
+```sh
+source ~/.bashrc
 
 3. Verify the variable is set:
-- echo $CHRLINE_PATCH_PATH
+```sh
+echo $CHRLINE_PATCH_PATH
 
 **Setting Environment Variables FOR WINDOWS**
 1. For Command Prompt (cmd):
- - set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
+```sh
+set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
 2. For PowerShell:
  - To set the variable permanently:
-  - [System.Environment]::SetEnvironmentVariable("CHRLINE_PATCH_PATH", "Specify the correct directory path for CHRLINE-PatchV2", [System.EnvironmentVariableTarget]::User)
+ ```sh
+ [System.Environment]::SetEnvironmentVariable("CHRLINE_PATCH_PATH", "Specify the correct directory path for CHRLINE-PatchV2", [System.EnvironmentVariableTarget]::User)
  - To set it only for the current session:
-   - $env:CHRLINE_PATCH_PATH = "Specify the correct directory path for CHRLINE-PatchV2"
+  ```sh
+  $env:CHRLINE_PATCH_PATH = "Specify the correct directory path for CHRLINE-PatchV2"
 
 
 #### Requirement ####
