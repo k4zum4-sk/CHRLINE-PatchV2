@@ -48,7 +48,7 @@
 
 **環境変数の設定 FOR WINDOWS**
 1. コマンドプロンプト（cmd）の場合:
-   ```sh
+  ```sh
   set CHRLINE_PATCH_PATH "CHRLINE-PatchV2の正しいディレクトリパスを指定"  を実行
   ```
 2. PowerShell の場合:
