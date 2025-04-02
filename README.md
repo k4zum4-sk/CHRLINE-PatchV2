@@ -97,7 +97,13 @@ Specific changes:
 
 The basic usage in Japanese is described in the CHRLINE-PatchV2/test file.
 
-The available modules are listed in CHRLINE-PatchV2/CHRLINE/service/object.py.
+The available modules are listed in CHRLINE-PatchV2/CHRLINE/object.py.
+## First.
+
+```sh
+git clone https://github.com/k4zum4-sk/CHRLINE-PatchV2.git
+```
+## SET UP
 
 You can run the setup with the following command:
 python3 setup.py install
