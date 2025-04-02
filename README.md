@@ -13,6 +13,15 @@
 
 - 利用可能な API 一覧は `CHRLINE-PatchV2/CHRLINE/object.py` を参照してください。
 
+## はじめに
+
+まず、このリポジトリをクローンしてください：
+
+```sh
+git clone https://github.com/k4zum4-sk/CHRLINE-PatchV2.git
+```
+## セットアップ
+
 以下のコマンドでセットアップが実行できます：
 ```sh
 python3 setup.py install
