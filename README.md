@@ -11,8 +11,8 @@ CHRLINEを使うことで**個人アカウントのBOT化**などを実現でき
 元のCHRLINEリポジトリ -> https://github.com/DeachSword/CHRLINE/tree/master
 
 **具体的な修正内容**
- - `thrift.py`がthriftライブラリと衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
- - `client.py`のインポート文をchrline_thriftに合わせて修正
+ - `thrift.py` というファイル名が公式の thriftライブラリと衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
+ - `client.py`のインポート文を`chrline_thrift`に合わせて修正
 
 - 日本語のコメント付きサンプルコードは `CHRLINE-PatchV2/test/` にあります。  
 
