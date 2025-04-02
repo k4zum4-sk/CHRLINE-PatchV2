@@ -107,7 +107,7 @@ python3 -m pip install .
   - httpx[http2]
   - gevent
 
-その他必要なモジュールは各々でインストールをお願いします
+必要なモジュールが不足している場合は、適宜インストールしてください。
 
  - - - - - - # k4zum4 # - - - - - - 
 # CHRLINE Patch for JP
