@@ -33,10 +33,6 @@ python -m pip install pycryptodome
   - `thrift.py` というファイル名が公式の `thriftライブラリ`と衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
   - `client.py`のインポート文を`chrline_thrift`に合わせて修正
 
-- 日本語のコメント付きサンプルコードは `CHRLINE-PatchV2/test/` にあります。  
-
-- 利用可能な API 一覧は `CHRLINE-PatchV2/CHRLINE/object.py` を参照してください。
-
 ## はじめに
 
 このリポジトリをクローンし、セットアップ手順を実行してください
@@ -54,6 +50,9 @@ python3 setup.py install
 ```sh
 python3 -m pip install .
 ```
+日本語のコメント付きサンプルコードは `CHRLINE-PatchV2/test/` にあります。  
+
+利用可能な API 一覧は `CHRLINE-PatchV2/CHRLINE/object.py` を参照してください。
 
 まずは`CHRLINE-PatchV2/test/login_getToken_test.py`から試してみてください。
 
