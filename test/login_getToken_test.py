@@ -17,7 +17,7 @@ def login_web(): #emailとpasswordを入力してPINコードを受け取る
     e = input('Email: ')
     p = input('Password: ')
     try:
-        return CHRLINE(e, p, device="WEB")
+        return CHRLINE(e, p, device="DESKTOPWIN",useThrift=True) 
     except Exception as err:
         print(f"ログイン失敗: {err}")
         return None
@@ -31,7 +31,7 @@ def login_qr(): #.imagesディレクトリにQRコードが保存されるので
 
 def login_phone(): #電話番号と国を指定してログイン 例:09012345678, JP
     try:
-        return CHRLINE(phone="", region="") #このログイン方法は推奨しません。
+        return CHRLINE(phone="", region="", device="IOSIPAD",useThrift=True) #このログイン方法は推奨しません。
     except Exception as err:
         print(f"ログイン失敗: {err}")
         return None
