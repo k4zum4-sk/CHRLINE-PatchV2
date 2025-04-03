@@ -114,6 +114,10 @@ python3 -m pip install .
   - qrcode
   - cryptography
 
+```sh
+pip install pycryptodome xxhash httpx gevent thrift rsa python-axolotl-curve25519 image requests qrcode cryptography
+```
+
 必要なモジュールが不足している場合は、適宜インストールしてください。
 
  - - - - - - # k4zum4 # - - - - - - 
@@ -211,5 +215,9 @@ set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
   - requests
   - qrcode
   - cryptography
+
+```sh
+pip install pycryptodome xxhash httpx gevent thrift rsa python-axolotl-curve25519 image requests qrcode cryptography
+```
 
  - - - - - - # k4zum4 # - - - - - - 
