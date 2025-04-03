@@ -11,6 +11,7 @@ CHRLINEは、LINEのChrome版APIを利用した非公式デバッグ用ライブ
 CHRLINEを使うことで**様々なデバッグ**や**個人アカウントのBOT化**などを実現できます。
 
 元々は**Thriftを使用しないLINE Chrome APIの解析ツール**として開発されました。
+
 そのため、通常のbot用途には非推奨とされています（**動作自体は可能です**）
 
 元のCHRLINEリポジトリ -> https://github.com/DeachSword/CHRLINE/tree/master
