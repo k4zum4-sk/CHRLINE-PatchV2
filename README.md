@@ -102,10 +102,17 @@ python3 -m pip install .
 
 - Python 3.7
   - ~~pycrypto~~
-  - pycryptodome
+  - **pycryptodome**
   - xxhash
   - httpx[http2]
   - gevent
+  - thrift
+  - rsa
+  - python-axolotl-curve25519
+  - image
+  - requests
+  - qrcode
+  - cryptography
 
 必要なモジュールが不足している場合は、適宜インストールしてください。
 
@@ -193,9 +200,16 @@ set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
 
 - Python 3.7
   - ~~pycrypto~~
-  - pycryptodome
+  - **pycryptodome**
   - xxhash
   - httpx[http2]
   - gevent
+  - thrift
+  - rsa
+  - python-axolotl-curve25519
+  - image
+  - requests
+  - qrcode
+  - cryptography
 
  - - - - - - # k4zum4 # - - - - - - 
