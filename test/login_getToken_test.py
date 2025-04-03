@@ -38,8 +38,8 @@ def login_phone(): #電話番号と国を指定してログイン 例:0901234567
         print(f"ログイン失敗: {err}")
         return None
 cl = login_qr()
-#cl = login_phone()　# 電話番号ログインを試す場合はこちらをコメント解除
-#cl = login_web()　# Webログインを試す場合はこちらをコメント解除
+#cl = login_phone() # 電話番号ログインを試す場合はこちらをコメント解除
+#cl = login_web() # Webログインを試す場合はこちらをコメント解除
 print("ログイン成功")
 token = cl.authToken
 print(f"authToken: {token}")
