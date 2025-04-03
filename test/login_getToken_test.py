@@ -13,11 +13,13 @@ else:
 from CHRLINE import *
 from CHRLINE.hooks import HooksTracer
 
+#device -> "DESKTOPWIN","DESKTOPMAC","IOSIPAD","CHROMEOS","WATCHOS"
+
 def login_web(): #emailとpasswordを入力してPINコードを受け取る
     e = input('Email: ')
     p = input('Password: ')
     try:
-        return CHRLINE(e, p, device="DESKTOPWIN",useThrift=True) 
+        return CHRLINE(e, p, device="IOSIPAD",useThrift=True) 
     except Exception as err:
         print(f"ログイン失敗: {err}")
         return None
