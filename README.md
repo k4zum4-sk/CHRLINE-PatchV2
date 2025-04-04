@@ -14,7 +14,7 @@ CHRLINEを使うことで**様々なデバッグ**や**個人アカウントのB
 
 そのため、通常のbot用途には非推奨とされています（**動作自体は可能です**）
 
-元のCHRLINEリポジトリ -> https://github.com/DeachSword/CHRLINE/tree/master
+元のCHRLINEリポジトリ -> [DeachSword/CHRLINE](https://github.com/DeachSword/CHRLINE/tree/master)
 
 # 背景
 まず、このライブラリの直接の開発者は私ではありません。
@@ -40,12 +40,13 @@ CHRLINE を利用する際、Crypto モジュールのエラーや、循環イ�
   - `from Crypto.Cipher import AES` などのインポートが Windows でエラーになる問題を修正
   - `CHRLINE-PatchV2/CHRLINE/e2ee.py,models.py` のインポート文 `Crypto` を `Cryptodome` に変更し、どの環境でも動作するよう統一
 
-  - もし `pycrypto` をインストールしている場合は、以下のコマンドで削除し、代わりに pycryptodome をインストールしてください
+  - もし `pycrypto` をインストールしている場合は、以下のコマンドで削除し、代わりに pycryptodomex をインストールしてください
 ```sh
 python -m pip uninstall pycrypto
-python -m pip install pycryptodome
+python -m pip install pycryptodomex
 ```
 
+  - 
 **2. 循環インポートとそれに関するエラーの修正**
 
   - `thrift.py` というファイル名が公式の `thriftライブラリ`と衝突して循環インポートを起こしていたので`chrline_thrift.py`にリネーム
@@ -119,7 +120,7 @@ python3 -m pip install .
 
 - Python 3.7
   - ~~pycrypto~~
-  - **pycryptodome**
+  - **pycryptodomex**
   - xxhash
   - httpx[http2]
   - gevent
@@ -130,9 +131,10 @@ python3 -m pip install .
   - requests
   - qrcode
   - cryptography
+  - rich
 
 ```sh
-pip install pycryptodome xxhash httpx gevent thrift rsa python-axolotl-curve25519 image requests qrcode cryptography
+pip install pycryptodomex xxhash httpx gevent thrift rsa python-axolotl-curve25519 image requests qrcode cryptography rich
 ```
 
 必要なモジュールが不足している場合は、適宜インストールしてください。
@@ -173,7 +175,7 @@ This project is a modified version of the unofficial LINE API, CHRLINE, that fix
 The basic usage in Japanese is described in the CHRLINE-PatchV2/test file.
 
 The available modules are listed in CHRLINE-PatchV2/CHRLINE/object.py.
-## First.
+## Getting Started.
 
 ```sh
 git clone https://github.com/k4zum4-sk/CHRLINE-PatchV2.git
@@ -234,7 +236,7 @@ set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
 
 - Python 3.7
   - ~~pycrypto~~
-  - **pycryptodome**
+  - **pycryptodomex**
   - xxhash
   - httpx[http2]
   - gevent
@@ -245,9 +247,10 @@ set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
   - requests
   - qrcode
   - cryptography
+  - rich
 
 ```sh
-pip install pycryptodome xxhash httpx gevent thrift rsa python-axolotl-curve25519 image requests qrcode cryptography
+pip install pycryptodomex xxhash httpx gevent thrift rsa python-axolotl-curve25519 image requests qrcode cryptography rich
 ```
 
 # Disclaimer:
