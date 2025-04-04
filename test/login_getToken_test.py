@@ -1,4 +1,4 @@
-#ログインしてトークンを取得するテストコード
+#ログインして認証トークンを取得するテストコード
 
 import sys
 import os
@@ -9,6 +9,8 @@ if chrline_path:
     sys.path.insert(0, chrline_path)
 else:
     print("環境変数 CHRLINE_PATCH_PATH が設定されていません\nREADME.mdを確認してください")
+    sys.exit(1)
+    
 #パスを取得してからimprot
 from CHRLINE import *
 from CHRLINE.hooks import HooksTracer
