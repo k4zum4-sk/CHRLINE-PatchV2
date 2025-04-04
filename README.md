@@ -138,7 +138,8 @@ pip install pycryptodome xxhash httpx gevent thrift rsa python-axolotl-curve2551
  - **LINEの規約に違反する可能性があるため、本番環境での利用は推奨しません**。
  - このプロジェクトは**研究・学習目的の利用を前提**としています。
 
- - - - - - - # k4zum4 # - - - - - - 
+=========================== k4zum4 =========================
+
 # CHRLINE Patch for JP
 
 First of all, I am not the direct developer of this library.
@@ -238,4 +239,4 @@ set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
 pip install pycryptodome xxhash httpx gevent thrift rsa python-axolotl-curve25519 image requests qrcode cryptography
 ```
 
- - - - - - - # k4zum4 # - - - - - - 
+=========================== k4zum4 =========================
