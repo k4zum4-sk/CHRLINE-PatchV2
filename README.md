@@ -133,6 +133,11 @@ pip install pycryptodome xxhash httpx gevent thrift rsa python-axolotl-curve2551
 
 必要なモジュールが不足している場合は、適宜インストールしてください。
 
+# 注意点
+ - **公式のLINE APIではない**ため、利用は自己責任でお願いします。
+ - **LINEの規約に違反する可能性があるため、本番環境での利用は推奨しません**。
+ - このプロジェクトは**研究・学習目的の利用を前提**としています。
+
  - - - - - - # k4zum4 # - - - - - - 
 # CHRLINE Patch for JP
 
