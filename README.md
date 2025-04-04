@@ -1,4 +1,4 @@
-# CHRLINE 修正パッチ (日本語版)
+# CHRLINE 修正パッチ: 循環インポート & Cryptoエラー対応 (日本語版)
 ![logo](/examples/assets/logo.png)
 
 このプロジェクトは、Python非公式LINE APIであるCHRLINEの**循環インポート問題やインポートエラー**などを修正したバージョンです。
@@ -144,14 +144,19 @@ pip install pycryptodome xxhash httpx gevent thrift rsa python-axolotl-curve2551
 
 =========================== k4zum4 =========================
 
-# CHRLINE Patch for JP
+# CHRLINE Patch: Fixing Circular Imports & Crypto Errors
 
 First of all, I am not the direct developer of this library.
 DeachSword holds all rights to it.
 
 This project is a modified version of the unofficial LINE API, CHRLINE, that fixes circular import issues and import errors.
 
-Specific changes:
+# My Contribution:
+- Analyzed the original library's code to identify issues related to circular imports and Crypto module errors.
+- Implemented fixes to ensure compatibility across different environments (e.g., Windows).
+- Created and tested login functionality to verify the patch's effectiveness.
+
+# Specific changes:
 
 1. **Fixed Crypto module error on Windows**
 
@@ -243,4 +248,7 @@ set CHRLINE_PATCH_PATH="Specify the correct directory path for CHRLINE-PatchV2"
 pip install pycryptodome xxhash httpx gevent thrift rsa python-axolotl-curve25519 image requests qrcode cryptography
 ```
 
+# Disclaimer:
+- This project is not an official LINE API, and its use is at your own risk.
+- It may violate LINE's terms of service, so it is not recommended for production use.
 =========================== k4zum4 =========================
