@@ -32,7 +32,7 @@ from .serializers.DummyProtocol import (
     DummyProtocolSerializer,
     DummyThrift,
 )
-from .services.thrift import *
+from .services import *
 from .services.thrift.ap.TCompactProtocol import TCompactProtocol as tcProtocol
 from .services.thrift.ttypes import TalkException
 from .timeline import Timeline
