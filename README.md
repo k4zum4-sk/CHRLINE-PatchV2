@@ -160,12 +160,14 @@ This project is a modified version of the unofficial LINE API, CHRLINE, that fix
 
 1. **Fixed Crypto module error on Windows**
 
-  -Resolved an issue where from Crypto.Cipher import AES and similar imports caused errors on Windows.
-  -Updated import statements in CHRLINE-PatchV2/CHRLINE/e2ee.py and models.py, changing Crypto to Cryptodome to ensure compatibility across all environments.
+  - Resolved an issue where from Crypto.Cipher import AES and similar imports caused errors on Windows.
+  
+  - Updated import statements in CHRLINE-PatchV2/CHRLINE/e2ee.py and models.py, changing Crypto to Cryptodome to ensure compatibility across all environments.
 
 2. **Fixed circular imports and related errors**
 
   - The file thrift.py was conflicting with the thrift library, causing circular imports. It has been renamed to chrline_thrift.py to resolve the issue.
+  
   - The import statements in client.py were modified to match the changes in chrline_thrift.
 
 The basic usage in Japanese is described in the CHRLINE-PatchV2/test file.
@@ -251,4 +253,6 @@ pip install pycryptodome xxhash httpx gevent thrift rsa python-axolotl-curve2551
 # Disclaimer:
 - This project is not an official LINE API, and its use is at your own risk.
 - It may violate LINE's terms of service, so it is not recommended for production use.
+
+
 =========================== k4zum4 =========================
