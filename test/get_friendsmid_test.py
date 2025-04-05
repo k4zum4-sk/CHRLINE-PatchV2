@@ -1,4 +1,4 @@
-#友達全員の詳細(mid)を取得するテストコード
+#友達全員の詳細(uid)を取得するテストコード
 
 import sys
 import os
@@ -24,6 +24,6 @@ token = "LINE_AUTH_TOKEN"  #login_getToken_test.pyで取得したトークンを
 cl = CHRLINE(token, device="DESKTOPWIN") #ログイン処理
 print("ログイン成功")
 
-friend_list = cl.getAllContactIds() #友達全員の詳細を取得
+friend_list = cl.getAllContactIds() #友達全員のuidを取得
 
 print(friend_list) 
