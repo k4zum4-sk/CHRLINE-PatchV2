@@ -1,4 +1,4 @@
-#指定したmidに対してメッセージを送信するテストコード
+#指定したuidに対してメッセージを送信するテストコード
 
 import sys
 import os
@@ -20,7 +20,7 @@ token = "LINE_AUTH_TOKEN"  #login_getToken_test.pyで取得したトークンを
 # トークンをファイルや環境変数から読み込む方法も良い
 #token = os.getenv("LINE_AUTH_TOKEN", "")
 
-to_Id = "" #例:get_friendsmid_test.pyなどで取得したmidを入力
+to_Id = "" #例:get_friendsmid_test.pyなどで取得したuidを入力
 
 cl = CHRLINE(token, device="DESKTOPWIN")#ログイン処理
 print("ログイン成功")
