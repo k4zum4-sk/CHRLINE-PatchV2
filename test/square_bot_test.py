@@ -3,6 +3,7 @@ import sys
 import os
 from CHRLINE import *
 from CHRLINE.hooks import HooksTracer
+from CHRLINE.helpers.square import SquareHelper
 
 # 環境変数チェック
 chrline_path = os.getenv("CHRLINE_PATCH_PATH")
@@ -19,10 +20,12 @@ tracer = HooksTracer(
     cl,
     prefixes=[""],  # コマンドプレフィックスなし
 )
-
 class SquareEventHook:
     """スクエアイベント専用ハンドラー"""
-    
+    def __init__(self, cl): #自分の情報取得
+        self.cl = cl
+        self.square_helper = SquareHelper()
+
     @tracer.Before(tracer.HooksType["SquareEvent"])
     def __before(self, op, cl):
         """イベント前処理"""
@@ -40,7 +43,8 @@ class SquareEventHook:
             message_id = notification.squareMessage.message.id
             text = notification.squareMessage.message.text
             content_type = notification.squareMessage.message.contentType
-            
+
+            MySquare_Mid = cl.getMySquareMidByChatMid(chat_id)#自分のmidを取得
             # 追加情報
             reactions = getattr(notification.squareMessage.message, 'reactions', [])
 
@@ -54,24 +58,25 @@ class SquareEventHook:
             タイプ: {['テキスト', '画像', '動画', '音声'][content_type] if content_type in [0,1,2,3] else 'その他'}
             リアクション数: {len(reactions)}
             """)
-
-            if text.strip() == "テスト": #==:メッセージがテストの場合 #in :メッセージにテストが含まれる場合
-                print("テストメッセージ検知")
-                # メッセージ送信
-                cl.sendSquareMessage(chat_id,f"テストメッセージを検知しました",content_type)
-                pass
-
-            elif text.strip() == "削除テスト": #メッセージが削除テストの場合
-                #取得したデータをそのまま返し削除
-                cl.destroySquareMessage(
-                    squareChatMid=chat_id,
-                    messageId=message_id,
-                    threadMid=None
-                    )
-                print("削除完了")
+            if sender_id == MySquare_Mid: #送信者が自分の場合
+                print("自分のイベントなのでスルー")
                 pass
             else:
-                pass
+                if text.strip() == "テスト": #==:メッセージがテストの場合 #in :メッセージにテストが含まれる場合
+                    print("テストメッセージ検知")
+                    # メッセージ送信
+                    cl.sendSquareMessage(chat_id,f"テストメッセージを検知しました",content_type)
+                    pass
+
+                elif text.strip() == "削除テスト": #メッセージが削除テストの場合
+                    #取得したデータをそのまま返し削除
+                    cl.destroySquareMessage(
+                        squareChatMid=chat_id,
+                        messageId=message_id,
+                        threadMid=None
+                        )
+                    print("削除完了")
+                    pass
 
         except AttributeError as e:
             print(f"データ構造エラー: {str(e)}")
@@ -81,7 +86,7 @@ class SquareEventHook:
             traceback.print_exc()  # 詳細トレースバック出力
 
 
-
+square_hook = SquareEventHook(cl)
 
 class EventHook:
     """システムイベントハンドラー"""
