@@ -22,6 +22,8 @@ def login_web(): #emailとpasswordを入力してPINコードを受け取る
     p = input('Password: ')
     try:
         return CHRLINE(e, p, device="IOSIPAD",useThrift=True) 
+        #device：接続デバイスの種類（DESKTOPWIN=Windowsデスクトップ版を模倣）
+        #useThrift：LINEの旧プロトコルを使用するオプション
     except Exception as err:
         print(f"ログイン失敗: {err}")
         return None
