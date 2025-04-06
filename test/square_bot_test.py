@@ -14,37 +14,39 @@ sys.path.insert(0, chrline_path)
 # クライアント初期化
 token = ""  # 実際のトークンに置き換え
 cl = CHRLINE(token, device="DESKTOPWIN", useThrift=True)
+#device：接続デバイスの種類（DESKTOPWIN=Windowsデスクトップ版を模倣）
+#useThrift：LINEの旧プロトコルを使用するオプション
 
 # HooksTracer設定（スクエア専用）
 tracer = HooksTracer(
     cl,
-    prefixes=[""],  # コマンドプレフィックスなし
+    prefixes=[""],  # コマンドプレフィックスなし prefixes：コマンドの接頭辞（空文字=すべてのメッセージを処理）
 )
 class SquareEventHook:
     """スクエアイベント専用ハンドラー"""
     def __init__(self, cl): #自分の情報取得
         self.cl = cl
-        self.square_helper = SquareHelper()
+        self.square_helper = SquareHelper() #square_helper：スクエア機能専用ヘルパークラス
 
     @tracer.Before(tracer.HooksType["SquareEvent"])
-    def __before(self, op, cl):
+    def __before(self, op, cl): #op：受信した操作オブジェクト cl：クライアントインスタンス
         """イベント前処理"""
         pass
 
-    @tracer.SquareEvent(29)
-    def NOTIFICATION_MESSAGE(self, event, cl):
+    @tracer.SquareEvent(29) #29：スクエアメッセージ通知のイベントタイプ
+    def NOTIFICATION_MESSAGE(self, event, cl): #eventにデータが格納
         try:
             # 必須情報の直接取得
-            notification = event.payload.notificationMessage
+            notification = event.payload.notificationMessage　#通知メッセージの生データ
             
             # 基本情報
-            sender_id = notification.squareMessage.message._from
-            chat_id = notification.squareChatMid
+            sender_id = notification.squareMessage.message._from #送信者のユーザーMID
+            chat_id = notification.squareChatMid #スクエアチャットのMID
             message_id = notification.squareMessage.message.id
             text = notification.squareMessage.message.text
             content_type = notification.squareMessage.message.contentType
 
-            MySquare_Mid = cl.getMySquareMidByChatMid(chat_id)#自分のmidを取得
+            MySquare_Mid = cl.getMySquareMidByChatMid(chat_id)#getMySquareMidByChatMid：チャットから自身のMIDを取得
             # 追加情報
             reactions = getattr(notification.squareMessage.message, 'reactions', [])
 
@@ -65,7 +67,7 @@ class SquareEventHook:
                 if text.strip() == "テスト": #==:メッセージがテストの場合 #in :メッセージにテストが含まれる場合
                     print("テストメッセージ検知")
                     # メッセージ送信
-                    cl.sendSquareMessage(chat_id,f"テストメッセージを検知しました",content_type)
+                    cl.sendSquareMessage(chat_id,f"テストメッセージを検知しました",content_type) #sendSquareMessage：スクエアチャットへのメッセージ送信
                     pass
 
                 elif text.strip() == "削除テスト": #メッセージが削除テストの場合
@@ -74,7 +76,7 @@ class SquareEventHook:
                         squareChatMid=chat_id,
                         messageId=message_id,
                         threadMid=None
-                        )
+                        ) #destroySquareMessage：メッセージの強制削除機能
                     print("削除完了")
                     pass
 
@@ -92,11 +94,11 @@ class EventHook:
     """システムイベントハンドラー"""
     
     @tracer.Event
-    def onReady():
+    def onReady(): #onReady：BOT起動完了時に発火
         print('スクエア監視を開始しました')
 
     @tracer.Event
-    def onInitializePushConn():
+    def onInitializePushConn(): #onInitializePushConn：PUSH接続確立時に発火
         print('PUSH接続を初期化しました')
 
 # スクエア専用サービスで起動
@@ -107,7 +109,18 @@ tracer.run(
 )
 
 
+
 """
+
+起動 → HooksTracer初期化 → イベントフック登録
+↓
+PUSH接続確立 → onInitializePushConn発火
+↓
+監視開始 → onReady発火
+↓
+メッセージ受信 → NOTIFICATION_MESSAGE処理
+
+
 スクエアデータ構造
 {
     "3": 29,
