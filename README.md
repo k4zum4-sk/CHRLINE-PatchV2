@@ -5,7 +5,7 @@
 
 # CHRLINEとは？
 
-CHRLINEは、LINEのChrome版APIを利用した公式APIの非公式ラッパーライブラリです。
+CHRLINEは、LINEのChrome版APIを利用した公式APIを基盤とした非公式ラッパーライブラリです。
 
 
 CHRLINEを使うことで公式のMessaging APIでは実現できない**様々なデバッグ**や**個人アカウントのBOT化**,**オープンチャットでのBOT活動**などを実現できます。
