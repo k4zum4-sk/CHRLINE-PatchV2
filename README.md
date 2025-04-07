@@ -1,14 +1,14 @@
 # CHRLINE 修正パッチ: 循環インポート & Cryptoエラー対応 (日本語版)
 ![logo](/examples/assets/logo.png)
 
-このプロジェクトは、Python非公式LINE APIであるCHRLINEの**循環インポート問題やインポートエラー**などを修正したバージョンです。
+このプロジェクトは、Python公式LINEAPIの非公式ラッパーであるCHRLINEの**循環インポート問題やインポートエラー**などを修正したバージョンです。
 
 # CHRLINEとは？
 
-CHRLINEは、LINEのChrome版APIを利用した非公式デバッグ用ライブラリです。
+CHRLINEは、LINEのChrome版APIを利用した公式APIの非公式ラッパーライブラリです。
 
 
-CHRLINEを使うことで公式APIでは実現できない**様々なデバッグ**や**個人アカウントのBOT化**,**オープンチャットでのBOT活動**などを実現できます。
+CHRLINEを使うことで公式のMessaging APIでは実現できない**様々なデバッグ**や**個人アカウントのBOT化**,**オープンチャットでのBOT活動**などを実現できます。
 
 元々は**Thriftを使用しないLINE Chrome APIの解析ツール**として開発されました。
 
