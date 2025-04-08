@@ -3,6 +3,8 @@
 
 このプロジェクトは、Python公式LINEAPIの非公式ラッパーであるCHRLINEの**循環インポート問題やインポートエラー**などを修正したバージョンです。
 
+
+
 # CHRLINEとは？
 
 CHRLINEは、LINEのChrome版APIを利用した公式APIを基盤とした非公式ラッパーライブラリです。
@@ -27,6 +29,8 @@ CHRLINE を利用する際、Crypto モジュールのエラーや、循環イ�
  - LINEの通信仕様やプロトコルの解析をしたい人
  - 実験的・学習用にLINE Botを試したい人（本番運用は非推奨）
  - TMoreCompactのような公式仕様の挙動を調べたい人
+
+<div><video controls src="https://github.com/user-attachments/assets/1b442ff2-7ab0-4c68-a944-4311730c430b"></video></div>
 
 # 私の小さな貢献
 - 元ライブラリのコード解析
