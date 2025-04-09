@@ -30,12 +30,20 @@ CHRLINE を利用する際、Crypto モジュールのエラーや、循環イ�
  - 実験的・学習用にLINE Botを試したい人（本番運用は非推奨）
  - TMoreCompactのような公式仕様の挙動を調べたい人
 
-# 応用例：スクエアBOTの開発
+# 応用例①：スクエアBOTの開発
 
 このパッチを適用した環境では、LINEオープンチャット（スクエア）向けのBOTも開発できます。
 日本語コメント付きのテスト用BOTコードは `test/square_bot.py` に用意してあります。  
 **特定メッセージの検知、音声送信、メッセージ削除**などを試せます。
 <div><video controls src="https://github.com/user-attachments/assets/1b442ff2-7ab0-4c68-a944-4311730c430b"></video></div>
+
+# 応用例②：グループBOTの開発
+
+日本語コメント付きのテスト用BOTコードは `test/group_bot.py` に用意してあります。  
+**特定メッセージの検知、画像送信、スタンプ検知**などを試せます。
+<div><video controls src="https://github.com/user-attachments/assets/ce93d7b3-4b77-4388-9b25-145bbd344530"></video></div>
+
+
 
 # 私の小さな貢献
 - 元ライブラリのコード解析
