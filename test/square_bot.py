@@ -46,6 +46,20 @@ class SquareEventHook:
             # 追加情報
             reactions = getattr(notification.squareMessage.message, 'reactions', [])
 
+            #CHRLINE 前バージョンのライブラリ向けデータ取得
+            # notification_payload = event.val_4
+            # notification_data = notification_payload.val_30
+            # square_message = notification_data.val_2
+            # message = square_message.val_1
+            # chat_id = notification_data.val_1           # チャットMID            
+            # sender_id = message.val_1                   # 送信者MID            
+            # message_id = message.val_4                  # メッセージID            
+            # text = getattr(message, 'val_10', '')       # メッセージテキスト (存在しない場合があるのでgetattrを使用)            
+            # content_type = getattr(message, 'val_15', -1) # コンテンツタイプ (存在しない場合があるのでgetattrを使用)            
+            # MySquare_Mid = cl.getMySquareMidByChatMid(chat_id) # 自身のMIDを取得
+            # 追加情報（リアクションはアクセス方法が不明なため一旦保留）            
+            # reactions = getattr(message, 'reactions_field_id?', [])
+
             # ログ出力
             print(f"""
             [メッセージログ]
