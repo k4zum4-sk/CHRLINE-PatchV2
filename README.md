@@ -134,8 +134,8 @@ python3 -m pip install .
   ```
 
 #### 必要条件 ####
-
-- Python 3.7
+- CHRLINE 2.5.24以降推奨
+- Python 3.6<
   - ~~pycrypto~~
   - **pycryptodomex**
   - xxhash
