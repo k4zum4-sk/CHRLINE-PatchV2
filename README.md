@@ -133,8 +133,23 @@ python3 -m pip install .
   $env:CHRLINE_PATCH_PATH = "CHRLINE-PatchV2の正しいディレクトリパスを指定"
   ```
 
+# 環境差異に関する注意点
+
+CHRLINEのバージョンや環境によって、`SquareMessage` に含まれるフィールド構造が異なる場合があります。
+
+例えば、`event.payload.notificationMessage.squareMessage.message.text` に直接アクセスできる環境もあれば、  
+`event.val_4.val_30.val_2.val_1` のように `.val_xx` を辿らなければならない環境も確認されています。
+
+そのため、環境依存性を避けるために `getattr` での防御的な取得を推奨します。
+
+```sh
+text = getattr(notification.squareMessage.message, 'text', '')
+```
+
+動作確認済みのCHRLINEバージョンは`CHRLINE==2.5.24`です
+
 #### 必要条件 ####
-- CHRLINE 2.5.24以降推奨
+- CHRLINE
 - Python 3.6<
   - ~~pycrypto~~
   - **pycryptodomex**
