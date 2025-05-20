@@ -148,7 +148,7 @@ CHRLINEのバージョンや環境によって、`SquareMessage` に含まれる
 text = getattr(notification.squareMessage.message, 'text', '')
 ```
 
-動作確認済みのCHRLINEバージョンは`CHRLINE==2.5.24`です
+動作確認済みのCHRLINEは、バージョン`CHRLINE==2.5.24`に本修正パッチを当てた環境です。
 
 #### 必要条件 ####
 - CHRLINE
