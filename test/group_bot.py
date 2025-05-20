@@ -9,8 +9,10 @@ sys.path.insert(0, chrline_path)  # モジュール検索パスに追加
 from CHRLINE import CHRLINE
 from CHRLINE.hooks import HooksTracer
 
-# LINEクライアントの認証トークン（要設定）
-token = "YOUR_AUTH_TOKEN"  # 実際のトークンに置き換える
+# トークンを環境変数から読み込む
+#token = os.getenv("LINE_AUTH_TOKEN", "")
+if not token:
+    raise ValueError("環境変数 'LINE_AUTH_TOKEN' が設定されていません。")
 
 # LINEクライアントの初期化
 cl = CHRLINE(
