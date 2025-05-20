@@ -8,7 +8,11 @@ from CHRLINE.hooks import HooksTracer
 from CHRLINE.helpers.square import SquareHelper
 
 # クライアント初期化
-token = ""  # 実際のトークンに置き換え
+
+# トークンを環境変数から読み込む
+token = os.getenv("LINE_AUTH_TOKEN", "")
+if not token:
+    raise ValueError("環境変数 'LINE_AUTH_TOKEN' が設定されていません。")
 cl = CHRLINE(token, device="DESKTOPWIN", useThrift=True)
 #device：接続デバイスの種類（DESKTOPWIN=Windowsデスクトップ版を模倣）
 #useThrift：LINEの旧プロトコルを使用するオプション
