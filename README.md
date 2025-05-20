@@ -92,6 +92,8 @@ python3 -m pip install .
 
 まずは`CHRLINE-PatchV2/test/login_getToken_test.py`から試してみてください。
 
+`login_getToken_test.py`で取得したトークンを 環境変数 `LINE_AUTH_TOKEN`に設定し、トークンをソース管理下に置かないようにしてください。
+
 **環境変数の設定 FOR MAC & WSL**
 1. echo $SHELL を実行し、シェルの種類を確認:
   ```sh
