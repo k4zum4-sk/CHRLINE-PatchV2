@@ -13,11 +13,10 @@ else:
 from CHRLINE import *
 from CHRLINE.hooks import HooksTracer
 
-# トークンを設定（手動入力 or 環境変数から取得）
-token = "LINE_AUTH_TOKEN"  #login_getToken_test.pyで取得したトークンを入力 
-
-# トークンをファイルや環境変数から読み込む方法も良い
+# トークンを環境変数から読み込む
 #token = os.getenv("LINE_AUTH_TOKEN", "")
+if not token:
+    raise ValueError("環境変数 'LINE_AUTH_TOKEN' が設定されていません。")
 
 cl = CHRLINE(token, device="DESKTOPWIN")
 print("ログイン成功")
