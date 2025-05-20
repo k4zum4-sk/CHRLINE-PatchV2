@@ -15,7 +15,7 @@ from CHRLINE import *
 from CHRLINE.hooks import HooksTracer
 
 # トークンを環境変数から読み込む
-#token = os.getenv("LINE_AUTH_TOKEN", "")
+token = os.getenv("LINE_AUTH_TOKEN", "")
 if not token:
     raise ValueError("環境変数 'LINE_AUTH_TOKEN' が設定されていません。")
 
