@@ -88,7 +88,7 @@ python3 -m pip install .
 ```
 日本語のコメント付きサンプルコードは `CHRLINE-PatchV2/test/` にあります。  
 
-利用可能な API 一覧は `CHRLINE-PatchV2/CHRLINE/object.py` を参照してください。
+利用可能なAPI一覧は `CHRLINE-PatchV2/CHRLINE/services` から必要なファイルを参照してください。
 
 まずは`CHRLINE-PatchV2/test/login_getToken_test.py`から試してみてください。
 
@@ -124,7 +124,7 @@ python3 -m pip install .
 **環境変数の設定 FOR WINDOWS**
 1. コマンドプロンプト（cmd）の場合:
   ```sh
-  set CHRLINE_PATCH_PATH "CHRLINE-PatchV2の正しいディレクトリパスを指定"
+  set CHRLINE_PATCH_PATH="CHRLINE-PatchV2の正しいディレクトリパスを指定"
   ```
 2. PowerShell の場合:
   ```sh
