@@ -1,0 +1,29 @@
+# CHRLINE-PatchV2 Dependencies
+# Required Python packages for CHRLINE-PatchV2
+
+# Crypto library (fixed version to avoid Crypto/Cryptodome conflicts)
+pycryptodomex==3.20.0
+
+# Core dependencies
+xxhash>=3.4.1
+httpx[http2]>=0.27.0
+h2>=3.2.0
+gevent>=24.2.1
+thrift>=0.20.0
+rsa>=4.9
+python-axolotl-curve25519>=0.4.1
+requests>=2.31.0
+qrcode>=7.4.2
+cryptography>=42.0.0
+rich>=13.7.0
+
+# Image handling (use Pillow instead of Image)
+pillow>=10.2.0
+
+# Note: If you encounter "No module named 'zope.event'" error with gevent,
+# try installing the following packages:
+# pip install --force-reinstall zope.event zope.interface
+
+# Installation commands:
+# pip install -r requirements.txt
+# python setup.py install

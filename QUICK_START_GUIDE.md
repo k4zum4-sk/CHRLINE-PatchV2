@@ -33,6 +33,14 @@ cd CHRLINE-PatchV2
 
 ### ステップ2: 依存関係のインストール / Step 2: Install Dependencies
 
+**Recommended: Use requirements.txt**
+
+```bash
+pip install -r requirements.txt
+```
+
+**Or install individually:**
+
 ```bash
 pip install pycryptodomex xxhash httpx[http2] gevent thrift rsa python-axolotl-curve25519 pillow requests qrcode cryptography rich
 ```
