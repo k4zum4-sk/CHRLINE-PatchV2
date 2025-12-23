@@ -3,6 +3,39 @@
 
 このプロジェクトは、Python非公式LINE APIラッパーであるCHRLINEの**循環インポート問題やインポートエラー**などを修正したバージョンです。
 
+---
+
+## 🚀 クイックスタート / Quick Start
+
+**初めての方はこちら！ / For beginners:**
+
+1. **📚 詳しい使い方ガイド（日本語）**: [使い方ガイド.md](使い方ガイド.md)
+2. **📖 Quick Start Guide (English)**: [QUICK_START_GUIDE.md](QUICK_START_GUIDE.md)
+
+**簡単に始める:**
+
+```bash
+# 1. インストール / Installation
+git clone https://github.com/k4zum4-sk/CHRLINE-PatchV2.git
+cd CHRLINE-PatchV2
+pip install pycryptodomex xxhash "httpx[http2]" gevent thrift rsa python-axolotl-curve25519 pillow requests qrcode cryptography rich
+python setup.py install
+
+# 2. ログイン / Login
+python simple_login.py
+
+# 3. メッセージ送信 / Send Message
+python simple_send_message.py
+```
+
+**提供されているスクリプト / Available Scripts:**
+- `simple_login.py` - QRコードまたはメール/パスワードでログイン
+- `simple_send_message.py` - 友達一覧の表示とメッセージ送信
+- `complete_workflow.py` - ログインから送信までの完全なワークフロー
+- `sample_usage.py` - さまざまな機能のサンプルコード
+
+---
+
 
 
 # CHRLINEとは？
