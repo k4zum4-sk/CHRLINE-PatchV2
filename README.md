@@ -3,6 +3,55 @@
 
 このプロジェクトは、Python非公式LINE APIラッパーであるCHRLINEの**循環インポート問題やインポートエラー**などを修正したバージョンです。
 
+---
+
+## 🚀 クイックスタート / Quick Start
+
+**初めての方はこちら！ / For beginners:**
+
+### 📚 ドキュメント / Documentation
+
+- **🎯 [完全ガイド.md](完全ガイド.md)** - すべてがまとまった完全ガイド / Complete all-in-one guide
+- **📖 [使い方ガイド.md](使い方ガイド.md)** - 詳しい使い方ガイド（日本語）/ Detailed Japanese guide
+- **📘 [QUICK_START_GUIDE.md](QUICK_START_GUIDE.md)** - Quick Start Guide (English)
+
+### 🛠️ 提供されているツール / Available Tools
+
+| ツール / Tool | 説明 / Description |
+|--------------|-------------------|
+| `check_setup.py` | セットアップ確認 / Setup verification |
+| `simple_login.py` | QRコード/メールログイン / QR/Email login |
+| `simple_send_message.py` | メッセージ送信 / Send messages |
+| `complete_workflow.py` | 完全なワークフロー / Complete workflow |
+| `sample_usage.py` | サンプルコード集 / Sample code collection |
+
+### ⚡ 簡単に始める / Quick Start Commands:
+
+```bash
+# 1. インストール / Installation
+git clone https://github.com/k4zum4-sk/CHRLINE-PatchV2.git
+cd CHRLINE-PatchV2
+pip install -r requirements.txt
+python setup.py install
+
+# 2. セットアップ確認 / Verify setup
+python check_setup.py
+
+# 3. ログイン / Login
+python simple_login.py
+
+# 4. メッセージ送信 / Send Message
+python simple_send_message.py
+```
+
+**提供されているスクリプト / Available Scripts:**
+- `simple_login.py` - QRコードまたはメール/パスワードでログイン
+- `simple_send_message.py` - 友達一覧の表示とメッセージ送信
+- `complete_workflow.py` - ログインから送信までの完全なワークフロー
+- `sample_usage.py` - さまざまな機能のサンプルコード
+
+---
+
 
 
 # CHRLINEとは？

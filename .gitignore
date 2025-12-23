@@ -20,6 +20,10 @@ build
 *.log
 node_modules
 
+# Token files - DO NOT COMMIT
+.line_token
+*.token
+
 # DO NOT UPDATE THRIFT FILES PUBLIC THIS REPO
 /CHRLINE/services/thrift/*Service.py
 /CHRLINE/services/thrift/*Service-remote
